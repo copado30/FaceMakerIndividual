@@ -5,14 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="bottom"
     tools:context=".MainActivity">
 
 
-    <Spinner
-        android:id="@+id/hairSpinner"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:spinnerMode="dropdown"> </Spinner>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/hairSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"> </Spinner>
+
+        <Button
+            android:id="@+id/randFaceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" Random Face "
+            android:layout_marginRight="10dp">
+
+        </Button>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <RadioButton android:id="@+id/radioEyes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eyes"/>
+            <RadioButton android:id="@+id/radioHair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hair"/>
+            <RadioButton android:id="@+id/radioSkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skin"/>
+        </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,17 +59,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:layout_marginBottom="14dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="R"
-            android:layout_marginRight="10dp"> </TextView>
-    <SeekBar
+            android:text="R">
+        </TextView>
+        <SeekBar
         android:id="@+id/rSeek"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="2"
         android:max="255"
         android:min="0"> </SeekBar>
 
@@ -45,38 +80,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="bottom">
+        android:layout_marginBottom="14dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G"
-            android:layout_marginRight="10dp"> </TextView>
-    <SeekBar
+            android:text="G">
+        </TextView>
+        <SeekBar
         android:id="@+id/gSeek"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="2"
         android:max="255"
         android:min="0"> </SeekBar>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="B"
-            android:layout_marginRight="10dp"> </TextView>
-    <SeekBar
+            android:text="B">
+        </TextView>
+        <SeekBar
         android:id="@+id/bSeek"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="2"
         android:max="255"
         android:min="0"> </SeekBar>
-    </LinearLayout>
-    </LinearLayout>
 
+
+    </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
