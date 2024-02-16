@@ -2,8 +2,8 @@
     <string name="app_name">FaceMakerIndividual</string>
     <string-array name="hairOptions">
 
-        <item>bald</item>
-        <item>normal</item>
-        <item>long hair</item>
+        <item>Bald</item>
+        <item>Normal</item>
+        <item>Long Hair</item>
     </string-array>
 </resources>
