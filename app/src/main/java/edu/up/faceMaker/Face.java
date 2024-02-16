@@ -3,7 +3,11 @@ package edu.up.faceMaker;
 import android.graphics.Canvas;
 
 import java.util.Random;
+/*
+@author Rafael Copado
+Last Updated 2/15/2024
 
+ */
 public class Face {
     public int skinColor;
     public int eyeColor;

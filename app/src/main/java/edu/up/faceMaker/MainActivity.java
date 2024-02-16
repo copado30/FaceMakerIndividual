@@ -5,7 +5,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
+/*
+@author Rafael Copado
+Last Updated 2/15/2024
 
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
