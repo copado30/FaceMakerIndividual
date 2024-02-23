@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <edu.up.faceMaker.FaceView
+    <edu.up.faceMaker.Face
         android:id="@+id/faceview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
