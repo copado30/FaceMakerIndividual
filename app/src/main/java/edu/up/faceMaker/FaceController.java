@@ -4,7 +4,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CompoundButton;
-import android.widget.RadioGroup;
 import android.widget.SeekBar;
 
 /*
@@ -17,7 +16,6 @@ Last Updated 2/15/2024
 
 public class FaceController implements View.OnClickListener, CompoundButton.OnCheckedChangeListener, SeekBar.OnSeekBarChangeListener, AdapterView.OnItemSelectedListener {
     private FaceView faceView;
-    RadioGroup  radioGroup;
 
     public FaceController(FaceView passedView ){
         faceView = passedView;
@@ -38,41 +36,17 @@ public class FaceController implements View.OnClickListener, CompoundButton.OnCh
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        int currentButton = radioGroup.getCheckedRadioButtonId();
 
-        if(currentButton == R.id.radioSkin) {
-            if (seekBar.getId() == R.id.rSeek) {
-                faceView.skinRed = progress;
-            }
-            if (seekBar.getId() == R.id.gSeek) {
-                faceView.skinGreen = progress;
-            }
-            if (seekBar.getId() == R.id.bSeek) {
-                faceView.skinBlue = progress;
-            }
+        if (seekBar.getId() == R.id.rSeek) {
+            faceView.red = progress;
         }
-        if(currentButton == R.id.radioHair) {
-            if (seekBar.getId() == R.id.rSeek) {
-                faceView.hairRed = progress;
-            }
-            if (seekBar.getId() == R.id.gSeek) {
-                faceView.hairGreen = progress;
-            }
-            if (seekBar.getId() == R.id.bSeek) {
-                faceView.hairBlue = progress;
-            }
+        if (seekBar.getId() == R.id.gSeek) {
+            faceView.green = progress;
         }
-        if(currentButton == R.id.radioEyes) {
-            if (seekBar.getId() == R.id.rSeek) {
-                faceView.eyesRed = progress;
-            }
-            if (seekBar.getId() == R.id.gSeek) {
-                faceView.eyesGreen = progress;
-            }
-            if (seekBar.getId() == R.id.bSeek) {
-                faceView.eyesBlue = progress;
-            }
+        if (seekBar.getId() == R.id.bSeek) {
+            faceView.blue = progress;
         }
+
 
     }
 

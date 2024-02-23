@@ -20,10 +20,9 @@ public class FaceView extends SurfaceView {
     public Paint eyePaint = new Paint();
     public Paint hairPaint = new Paint();
 
-    public int eyesRed, eyesGreen, eyesBlue;
-    public int hairRed, hairGreen, hairBlue;
-    public int skinRed, skinGreen, skinBlue;
-
+    public int red;
+    public int green;
+    public int blue;
 
     public int hairStyle = 0;//default is bald
 
@@ -48,17 +47,9 @@ public class FaceView extends SurfaceView {
     public void randomize(){
         Random randomNumber = new Random();
 
-        skinRed = randomNumber.nextInt(256);
-        skinGreen = randomNumber.nextInt(256);
-        skinBlue = randomNumber.nextInt(256);
-
-        hairRed = randomNumber.nextInt(256);
-        hairGreen = randomNumber.nextInt(256);
-        hairBlue = randomNumber.nextInt(256);
-
-        eyesRed = randomNumber.nextInt(256);
-        eyesGreen = randomNumber.nextInt(256);
-        eyesBlue = randomNumber.nextInt(256);
+        red = randomNumber.nextInt(256);
+        green = randomNumber.nextInt(256);
+        blue = randomNumber.nextInt(256);
 
         facePaint.setColor((int)Long.parseLong(faceColor,16));
         eyePaint.setColor((int)Long.parseLong(eyeColor,16));
@@ -76,9 +67,9 @@ public class FaceView extends SurfaceView {
     public void onDraw(Canvas canvas)
     {
 
-        faceColor = String.format("%02X%02X%02X%02X",255, skinRed, skinGreen, skinBlue);
-        eyeColor = String.format("%02X%02X%02X%02X",255, eyesGreen, eyesBlue, eyesRed);
-        hairColor = String.format("%02X%02X%02X%02X",255, hairBlue, hairRed, hairGreen);
+        faceColor = String.format("%02X%02X%02X%02X",255, red, green, blue);
+        eyeColor = String.format("%02X%02X%02X%02X",255, green, blue, red);
+        hairColor = String.format("%02X%02X%02X%02X",255, blue, red, green);
 
         facePaint.setColor((int)Long.parseLong(faceColor,16));
         //facePaint.setStyle(Paint.Style.FILL);
