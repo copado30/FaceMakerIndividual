@@ -21,7 +21,6 @@ public class FaceController implements View.OnClickListener, CompoundButton.OnCh
         faceView = passedView;
     }
 
-
     @Override
     public void onClick(View v) {
         faceView.randomize();//randomizes the character
@@ -47,7 +46,7 @@ public class FaceController implements View.OnClickListener, CompoundButton.OnCh
             faceView.blue = progress;
         }
 
-
+        faceView.invalidate();
     }
 
     @Override

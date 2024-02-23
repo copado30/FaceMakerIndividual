@@ -72,13 +72,13 @@ public class FaceView extends SurfaceView {
         hairColor = String.format("%02X%02X%02X%02X",255, blue, red, green);
 
         facePaint.setColor((int)Long.parseLong(faceColor,16));
-        //facePaint.setStyle(Paint.Style.FILL);
+        facePaint.setStyle(Paint.Style.FILL);
 
         eyePaint.setColor((int)Long.parseLong(eyeColor,16));
-        //eyePaint.setStyle(Paint.Style.FILL);
+        eyePaint.setStyle(Paint.Style.FILL);
 
         hairPaint.setColor((int)Long.parseLong(hairColor,16));
-        //hairPaint.setStyle(Paint.Style.FILL);
+        hairPaint.setStyle(Paint.Style.FILL);
         //gets called everytime invalidates()
         drawFace(canvas,facePaint,eyePaint,hairPaint);
 
